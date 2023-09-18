@@ -14,9 +14,9 @@ const flash = require('connect-flash')
 
 const errorController = require('./controllers/error');
 const User = require('./models/user');
+require('dotenv').config(); // for env variables
 
-const MONGODB_URI =
-  'mongodb+srv://RipperOni:andrey34rus@cluster0.aildf6i.mongodb.net/shop';
+const MONGODB_URI = process.env.MONGO_DB_URI
 
 const app = express();
 const store = new MongoDBStore({
@@ -62,13 +62,13 @@ app.use(cookieParser("cookie-parser-secret"));
 
 app.use(
   session({
-    secret: 'my secret',
+    secret: process.env.EXPRESS_SESSION_KEY,
     resave: false,
     saveUninitialized: false,
     store: store
   })
 );
-app.use(csurf("123456789iamasecret987654321look"))
+app.use(csurf(process.env.CSURF_KEY))
 app.use(flash())
 
 app.use((req, res, next) => {

@@ -21,6 +21,7 @@
     "cookie-parser": "^1.4.6",
     "csrf-csrf": "^2.3.0",
     "csurf": "^1.11.0",
+    "dotenv": "^16.3.1",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
