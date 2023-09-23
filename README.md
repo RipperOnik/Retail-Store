@@ -1,6 +1,6 @@
 # Retail-Store
 ## Description
-This is an online retail store where you can order products and add them for sale. 
+This is an online retail store where you can order products and add them for sale. View the deployed webapp here https://retail-store-ripperonik.onrender.com/
 ## Features
 - Authentication/Authorization
 - Resetting password
